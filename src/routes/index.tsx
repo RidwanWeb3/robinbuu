@@ -15,11 +15,11 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const CONTRACT = "Coming soon";
-const BUY_URL = "https://fun.noxa.fi/robinhood";
-const CHART_URL = "";
+const CONTRACT = "0xf8f6a5b2cb97d02871f96ad5e8fcf93ed727d3bf";
+const BUY_URL = "https://fun.noxa.fi/robinhood/token/0xf8f6a5b2cb97d02871f96ad5e8fcf93ed727d3bf";
+const CHART_URL = "https://dexscreener.com/robinhood/0x9f05ec2251a2f813118e23d70aab7bfb0cdf8117";
 const X_URL = "https://x.com/Therobinbuu";
-const TG_URL = "https://t.me/buubnb";
+const TG_URL = "https://t.me/therobinbuu";
 
 const marqueeItems = [
   "EATS THE DIPS", "$ROBINBUU", "TURN THE CHART SWEET", "REGENERATES FROM ANY RUG",
