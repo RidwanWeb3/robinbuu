@@ -8,8 +8,8 @@ import logoImg from "@/assets/logo.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "$BUU — Pinkest menace in crypto" },
-      { name: "description", content: "Majin $BUU on BNB Chain. Candy beams, dip-eating, infinite regen." },
+      { title: "$ROBINBUU — Pinkest menace on Robinhood Chain" },
+      { name: "description", content: "Robin Buu on Robinhood Chain. Candy beams, dip-eating, infinite regen." },
     ],
   }),
   component: Index,
@@ -18,12 +18,12 @@ export const Route = createFileRoute("/")({
 const CONTRACT = "0x7041cB10808d307cA58981B13838a02158fa6666";
 const BUY_URL = `https://pancakeswap.finance/swap?outputCurrency=${CONTRACT}&chain=bsc`;
 const CHART_URL = `https://dexscreener.com/bsc/${CONTRACT}`;
-const X_URL = "https://x.com/BuuFansBnB99";
+const X_URL = "https://x.com/Therobinbuu";
 const TG_URL = "https://t.me/buubnb";
 
 const marqueeItems = [
-  "EATS THE DIPS", "$BUU", "TURN THE CHART SWEET", "REGENERATES FROM ANY RUG",
-  "$BUU", "POWERED BY PURE MAJIN CHAOS", "CANDY BEAM ACTIVATED", "BUU EATS THE DIPS",
+  "EATS THE DIPS", "$ROBINBUU", "TURN THE CHART SWEET", "REGENERATES FROM ANY RUG",
+  "$ROBINBUU", "POWERED BY PURE MAJIN CHAOS", "CANDY BEAM ACTIVATED", "ROBIN BUU EATS THE DIPS",
 ];
 
 function Marquee() {
@@ -66,8 +66,8 @@ function Nav() {
     <header className="sticky top-0 z-40 border-b-[3px] border-[var(--ink)] bg-white/80 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
         <a href="#top" className="flex items-center gap-2">
-          <img src={logoImg} alt="$BUU logo" className="h-10 w-10 rounded-full border-[3px] border-[var(--ink)]" />
-          <span className="font-display text-2xl text-[var(--pink-deep)]">$BUU</span>
+          <img src={logoImg} alt="$ROBINBUU logo" className="h-10 w-10 rounded-full border-[3px] border-[var(--ink)]" />
+          <span className="font-display text-2xl text-[var(--pink-deep)]">$ROBINBUU</span>
         </a>
         <nav className="hidden gap-7 text-sm font-semibold uppercase tracking-wider md:flex">
           <a href="#about" className="hover:text-[var(--pink-deep)]">About</a>
@@ -98,23 +98,23 @@ function Hero() {
       <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 py-16 md:grid-cols-2 md:py-24">
         <div>
           <span className="pop inline-flex items-center gap-2 rounded-full bg-white px-4 py-1.5 text-xs font-bold uppercase tracking-wider">
-            🍬 Pure Majin chaos · BNB Chain
+            🍬 Pure Majin chaos · Robinhood Chain
           </span>
           <h1 className="mt-6 text-5xl leading-[0.95] md:text-7xl">
             <span className="block text-[var(--ink)]">Meet the pinkest</span>
-            <span className="block text-[var(--ink)]">menace in crypto</span>
+            <span className="block text-[var(--ink)]">menace on Robinhood</span>
             <span className="mt-3 block text-7xl text-[var(--pink-deep)] md:text-8xl"
               style={{ WebkitTextStroke: "2px var(--ink)" }}>
-              MAJIN $BUU
+              ROBIN $BUU
             </span>
           </h1>
           <p className="mt-6 max-w-lg text-lg text-[var(--ink)]/80">
-            He turns candy into chocolate, dips into snacks, and charts into pure sugar. Can't be rugged, can't be killed — he just regenerates and eats again.
+            Robin Buu turns candy into chocolate, dips into snacks, and charts into pure sugar. Can't be rugged, can't be killed — he just regenerates and eats again, now stealing from the whales and feeding the Robinhood Chain degens.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <a href={BUY_URL} target="_blank" rel="noreferrer"
               className="pop-lg rounded-full bg-[var(--yellow)] px-7 py-3 font-display text-xl tracking-wider transition active:translate-x-1 active:translate-y-1 active:shadow-none">
-              Buy $BUU
+              Buy $ROBINBUU
             </a>
             <a href={CHART_URL} target="_blank" rel="noreferrer"
               className="pop-lg rounded-full bg-white px-7 py-3 font-display text-xl tracking-wider transition active:translate-x-1 active:translate-y-1 active:shadow-none">
@@ -129,7 +129,7 @@ function Hero() {
             <span className="pop absolute -top-3 right-6 rounded-full bg-[var(--yellow)] px-3 py-1 text-xs font-bold">
               🎯 +1000%
             </span>
-            <img src={heroImg} alt="Majin Buu holding a giant coin" className="float w-full" />
+            <img src={heroImg} alt="Robin Buu holding a giant coin" className="float w-full" />
             <span className="pop absolute -bottom-3 left-6 rounded-full bg-[var(--pink)] px-3 py-1 text-xs font-bold">
               CANDY BEAM ⚡
             </span>
@@ -142,25 +142,25 @@ function Hero() {
 
 function About() {
   const traits = [
-    { icon: "♻️", title: "Regenerates", text: "Blow him up, he comes back bigger. The original diamond hands. You literally cannot get rid of him." },
-    { icon: "🍩", title: "Eats the dips", text: "Every red candle is a snack. Buu is always hungry and the dip menu never closes." },
+    { icon: "♻️", title: "Regenerates", text: "Blow him up, he comes back bigger. The original diamond hands of Robinhood Chain. You literally cannot get rid of him." },
+    { icon: "🍩", title: "Steals the dips", text: "Every red candle is a snack. Robin Buu robs the whales and drops the loot on the poor degens." },
     { icon: "⚡", title: "Candy beam", text: "One zap turns the whole chart into sugar. Sweetness is not optional around here." },
   ];
   return (
     <section id="about" className="mx-auto max-w-7xl px-4 py-20">
       <div className="grid items-center gap-12 md:grid-cols-2">
         <div className="pop-lg relative rounded-3xl bg-white p-6">
-          <img src={aboutImg} alt="Majin Buu firing a candy beam" className="w-full" />
+          <img src={aboutImg} alt="Robin Buu firing a candy beam" className="w-full" />
           <span className="pop absolute right-4 top-4 rounded-full bg-[var(--pink)] px-3 py-1 text-xs font-bold">Majin Energy 100%</span>
         </div>
         <div>
           <span className="font-display text-sm uppercase tracking-[0.3em] text-[var(--purple)]">The Legend</span>
-          <h2 className="mt-2 text-5xl text-[var(--ink)] md:text-6xl">Who is Buu?</h2>
+          <h2 className="mt-2 text-5xl text-[var(--ink)] md:text-6xl">Who is Robin Buu?</h2>
           <p className="mt-5 text-lg text-[var(--ink)]/80">
-            Born from pure mischief and an unstoppable sweet tooth, Majin Buu is the pink chaos goblin the charts deserve. He doesn't care about your candles, your TA, or your sleep schedule.
+            Born from pure mischief and an unstoppable sweet tooth, Robin Buu is the pink chaos goblin the charts deserve. He doesn't care about your candles, your TA, or your sleep schedule — he only cares about robbing whales and sharing candy.
           </p>
           <p className="mt-3 text-lg text-[var(--ink)]/80">
-            He just wants snacks, friends, and to turn everything into candy — and somehow that's the most honest tokenomics in the room. No roadmap. No promises. Just vibes, sugar, and infinite regeneration.
+            He just wants snacks, friends, and to turn everything into candy — and somehow that's the most honest tokenomics on Robinhood Chain. No roadmap. No promises. Just vibes, sugar, and infinite regeneration.
           </p>
           <div className="mt-8 grid gap-4 sm:grid-cols-3">
             {traits.map(t => (
@@ -189,14 +189,14 @@ function Tokenomics() {
       <div className="mx-auto max-w-7xl px-4 py-20">
         <div className="text-center">
           <span className="font-display text-sm uppercase tracking-[0.3em] text-[var(--purple)]">Tokenomics</span>
-          <h2 className="mt-2 text-5xl text-[var(--ink)] md:text-6xl">The Buu Recipe</h2>
+          <h2 className="mt-2 text-5xl text-[var(--ink)] md:text-6xl">The Robin Buu Recipe</h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-[var(--ink)]/80">
-            Simple ingredients. No funny business. Just sugar, liquidity, and a community that refuses to stop snacking.
+            Simple ingredients. No funny business. Just sugar, liquidity, and a Robinhood Chain community that refuses to stop snacking.
           </p>
         </div>
         <div className="mt-10 grid gap-6 md:grid-cols-[1.2fr_2fr]">
           <div className="pop-lg rounded-3xl bg-[var(--ink)] p-8 text-center text-white">
-            <div className="font-display text-sm uppercase tracking-[0.3em] text-[var(--yellow)]">Total Supply of $BUU</div>
+            <div className="font-display text-sm uppercase tracking-[0.3em] text-[var(--yellow)]">Total Supply of $ROBINBUU</div>
             <div className="mt-4 font-display text-6xl text-[var(--pink)]">1,000,000,000</div>
             <div className="mt-2 font-display text-2xl text-white/70">1B</div>
           </div>
@@ -212,7 +212,7 @@ function Tokenomics() {
         <div className="mt-8 flex flex-col items-center gap-4">
           <Contract />
           <p className="max-w-xl text-center text-sm text-[var(--ink)]/70">
-            Liquidity locked, contract renounced, 3% tax to keep the candy jar full. No funny business, just snacks.
+            Liquidity locked, contract renounced, 3% tax to keep the candy jar full. No funny business, just snacks — the Robinhood way.
           </p>
         </div>
       </div>
@@ -222,18 +222,18 @@ function Tokenomics() {
 
 function HowToBuy() {
   const steps = [
-    { icon: Wallet, title: "Get a wallet", text: "Download MetaMask or Trust Wallet and switch the network to BNB Smart Chain." },
-    { icon: Coins, title: "Fund with BNB", text: "Buy BNB on any exchange and send it to your new wallet. Keep a little for gas." },
-    { icon: ArrowLeftRight, title: "Swap on PancakeSwap", text: "Open PancakeSwap, paste the $BUU contract below, and swap your BNB for $BUU." },
-    { icon: PartyPopper, title: "Hold & snack", text: "Add $BUU to your wallet, hold tight, and join the Majin Army. Buu does the rest." },
+    { icon: Wallet, title: "Get a wallet", text: "Download MetaMask or Trust Wallet and add the Robinhood Chain network." },
+    { icon: Coins, title: "Fund with RBH", text: "Grab some RBH (Robinhood Chain gas token) on any supported exchange and send it to your wallet." },
+    { icon: ArrowLeftRight, title: "Swap on the DEX", text: "Open the Robinhood Chain DEX, paste the $ROBINBUU contract below, and swap your RBH for $ROBINBUU." },
+    { icon: PartyPopper, title: "Hold & snack", text: "Add $ROBINBUU to your wallet, hold tight, and join the Robin Army. Buu does the rest." },
   ];
   return (
     <section id="how" className="mx-auto max-w-7xl px-4 py-20">
       <div className="text-center">
-        <span className="font-display text-sm uppercase tracking-[0.3em] text-[var(--purple)]">On BNB Chain</span>
-        <h2 className="mt-2 text-5xl text-[var(--ink)] md:text-6xl">How to Buy $BUU</h2>
+        <span className="font-display text-sm uppercase tracking-[0.3em] text-[var(--purple)]">On Robinhood Chain</span>
+        <h2 className="mt-2 text-5xl text-[var(--ink)] md:text-6xl">How to Buy $ROBINBUU</h2>
         <p className="mx-auto mt-4 max-w-xl text-lg text-[var(--ink)]/80">
-          Four steps between you and the pinkest bag in crypto.
+          Four steps between you and the pinkest bag on Robinhood Chain.
         </p>
       </div>
       <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -251,7 +251,7 @@ function HowToBuy() {
       <div className="mt-12 flex flex-wrap justify-center gap-4">
         <a href={BUY_URL} target="_blank" rel="noreferrer"
           className="pop-lg rounded-full bg-[var(--yellow)] px-7 py-3 font-display text-xl tracking-wider">
-          Buy $BUU
+          Buy $ROBINBUU
         </a>
         <a href={CHART_URL} target="_blank" rel="noreferrer"
           className="pop-lg rounded-full bg-white px-7 py-3 font-display text-xl tracking-wider">
@@ -267,9 +267,9 @@ function Join() {
     <section id="join" className="border-t-[3px] border-[var(--ink)] bg-[var(--purple)] text-white">
       <div className="mx-auto max-w-7xl px-4 py-20 text-center">
         <span className="font-display text-sm uppercase tracking-[0.3em] text-[var(--yellow)]">Community</span>
-        <h2 className="mt-2 text-5xl md:text-6xl">Join the Majin Army</h2>
+        <h2 className="mt-2 text-5xl md:text-6xl">Join the Robin Army</h2>
         <p className="mx-auto mt-4 max-w-2xl text-lg text-white/85">
-          No suits, no roadmap, no chill. Just the friendliest pink mob in crypto. Pick your channel and come snack with us.
+          No suits, no roadmap, no chill. Just the friendliest pink mob on Robinhood Chain. Pick your channel and come snack with us.
         </p>
         <div className="mt-10 grid gap-6 sm:grid-cols-2 max-w-2xl mx-auto">
           <a href={X_URL} target="_blank" rel="noreferrer"
@@ -297,10 +297,10 @@ function Footer() {
     <footer className="border-t-[3px] border-[var(--ink)] bg-[var(--ink)] text-white">
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 py-8 md:flex-row">
         <div className="flex items-center gap-2">
-          <img src={logoImg} alt="$BUU" className="h-8 w-8 rounded-full border-2 border-white" />
-          <span className="font-display text-xl text-[var(--pink)]">$BUU</span>
+          <img src={logoImg} alt="$ROBINBUU" className="h-8 w-8 rounded-full border-2 border-white" />
+          <span className="font-display text-xl text-[var(--pink)]">$ROBINBUU</span>
         </div>
-        <p className="text-sm text-white/60">$BUU is a meme coin with no intrinsic value. DYOR and snack responsibly.</p>
+        <p className="text-sm text-white/60">$ROBINBUU is a meme coin with no intrinsic value. DYOR and snack responsibly.</p>
       </div>
     </footer>
   );
