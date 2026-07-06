@@ -120,10 +120,12 @@ function Hero() {
               className="pop-lg rounded-full bg-[var(--yellow)] px-7 py-3 font-display text-xl tracking-wider transition active:translate-x-1 active:translate-y-1 active:shadow-none">
               Buy $ROBINBUU
             </a>
-            <a href={CHART_URL} target="_blank" rel="noreferrer"
-              className="pop-lg rounded-full bg-white px-7 py-3 font-display text-xl tracking-wider transition active:translate-x-1 active:translate-y-1 active:shadow-none">
-              View Chart
-            </a>
+            {CHART_URL && (
+              <a href={CHART_URL} target="_blank" rel="noreferrer"
+                className="pop-lg rounded-full bg-white px-7 py-3 font-display text-xl tracking-wider transition active:translate-x-1 active:translate-y-1 active:shadow-none">
+                View Chart
+              </a>
+            )}
           </div>
           <div className="mt-8"><Contract /></div>
         </div>
