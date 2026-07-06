@@ -15,9 +15,9 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const CONTRACT = "0x7041cB10808d307cA58981B13838a02158fa6666";
-const BUY_URL = `https://pancakeswap.finance/swap?outputCurrency=${CONTRACT}&chain=bsc`;
-const CHART_URL = `https://dexscreener.com/bsc/${CONTRACT}`;
+const CONTRACT = "Coming soon";
+const BUY_URL = "https://fun.noxa.fi/robinhood";
+const CHART_URL = "";
 const X_URL = "https://x.com/Therobinbuu";
 const TG_URL = "https://t.me/buubnb";
 
@@ -43,9 +43,11 @@ function Marquee() {
 
 function Contract() {
   const [copied, setCopied] = useState(false);
+  const isComingSoon = CONTRACT === "Coming soon";
   return (
     <button
       onClick={() => {
+        if (isComingSoon) return;
         navigator.clipboard.writeText(CONTRACT);
         setCopied(true);
         setTimeout(() => setCopied(false), 1500);
@@ -54,9 +56,11 @@ function Contract() {
     >
       <span className="rounded-full bg-[var(--pink)] px-3 py-1 text-xs font-bold uppercase tracking-wider">Contract</span>
       <span className="flex-1 truncate font-mono text-sm text-[var(--ink)]">{CONTRACT}</span>
-      <span className="flex items-center gap-1 text-xs font-bold uppercase text-[var(--purple)]">
-        {copied ? <><Check className="h-4 w-4" /> Copied</> : <><Copy className="h-4 w-4" /> Copy</>}
-      </span>
+      {!isComingSoon && (
+        <span className="flex items-center gap-1 text-xs font-bold uppercase text-[var(--purple)]">
+          {copied ? <><Check className="h-4 w-4" /> Copied</> : <><Copy className="h-4 w-4" /> Copy</>}
+        </span>
+      )}
     </button>
   );
 }
@@ -116,10 +120,12 @@ function Hero() {
               className="pop-lg rounded-full bg-[var(--yellow)] px-7 py-3 font-display text-xl tracking-wider transition active:translate-x-1 active:translate-y-1 active:shadow-none">
               Buy $ROBINBUU
             </a>
-            <a href={CHART_URL} target="_blank" rel="noreferrer"
-              className="pop-lg rounded-full bg-white px-7 py-3 font-display text-xl tracking-wider transition active:translate-x-1 active:translate-y-1 active:shadow-none">
-              View Chart
-            </a>
+            {CHART_URL && (
+              <a href={CHART_URL} target="_blank" rel="noreferrer"
+                className="pop-lg rounded-full bg-white px-7 py-3 font-display text-xl tracking-wider transition active:translate-x-1 active:translate-y-1 active:shadow-none">
+                View Chart
+              </a>
+            )}
           </div>
           <div className="mt-8"><Contract /></div>
         </div>
@@ -253,10 +259,12 @@ function HowToBuy() {
           className="pop-lg rounded-full bg-[var(--yellow)] px-7 py-3 font-display text-xl tracking-wider">
           Buy $ROBINBUU
         </a>
-        <a href={CHART_URL} target="_blank" rel="noreferrer"
-          className="pop-lg rounded-full bg-white px-7 py-3 font-display text-xl tracking-wider">
-          View Chart
-        </a>
+        {CHART_URL && (
+          <a href={CHART_URL} target="_blank" rel="noreferrer"
+            className="pop-lg rounded-full bg-white px-7 py-3 font-display text-xl tracking-wider">
+            View Chart
+          </a>
+        )}
       </div>
     </section>
   );
