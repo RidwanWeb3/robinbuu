@@ -43,9 +43,11 @@ function Marquee() {
 
 function Contract() {
   const [copied, setCopied] = useState(false);
+  const isComingSoon = CONTRACT === "Coming soon";
   return (
     <button
       onClick={() => {
+        if (isComingSoon) return;
         navigator.clipboard.writeText(CONTRACT);
         setCopied(true);
         setTimeout(() => setCopied(false), 1500);
@@ -54,9 +56,11 @@ function Contract() {
     >
       <span className="rounded-full bg-[var(--pink)] px-3 py-1 text-xs font-bold uppercase tracking-wider">Contract</span>
       <span className="flex-1 truncate font-mono text-sm text-[var(--ink)]">{CONTRACT}</span>
-      <span className="flex items-center gap-1 text-xs font-bold uppercase text-[var(--purple)]">
-        {copied ? <><Check className="h-4 w-4" /> Copied</> : <><Copy className="h-4 w-4" /> Copy</>}
-      </span>
+      {!isComingSoon && (
+        <span className="flex items-center gap-1 text-xs font-bold uppercase text-[var(--purple)]">
+          {copied ? <><Check className="h-4 w-4" /> Copied</> : <><Copy className="h-4 w-4" /> Copy</>}
+        </span>
+      )}
     </button>
   );
 }
