@@ -259,10 +259,12 @@ function HowToBuy() {
           className="pop-lg rounded-full bg-[var(--yellow)] px-7 py-3 font-display text-xl tracking-wider">
           Buy $ROBINBUU
         </a>
-        <a href={CHART_URL} target="_blank" rel="noreferrer"
-          className="pop-lg rounded-full bg-white px-7 py-3 font-display text-xl tracking-wider">
-          View Chart
-        </a>
+        {CHART_URL && (
+          <a href={CHART_URL} target="_blank" rel="noreferrer"
+            className="pop-lg rounded-full bg-white px-7 py-3 font-display text-xl tracking-wider">
+            View Chart
+          </a>
+        )}
       </div>
     </section>
   );
