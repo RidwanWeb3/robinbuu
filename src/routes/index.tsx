@@ -15,9 +15,9 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const CONTRACT = "0x7041cB10808d307cA58981B13838a02158fa6666";
-const BUY_URL = `https://pancakeswap.finance/swap?outputCurrency=${CONTRACT}&chain=bsc`;
-const CHART_URL = `https://dexscreener.com/bsc/${CONTRACT}`;
+const CONTRACT = "Coming soon";
+const BUY_URL = "https://fun.noxa.fi/robinhood";
+const CHART_URL = "";
 const X_URL = "https://x.com/Therobinbuu";
 const TG_URL = "https://t.me/buubnb";
 
